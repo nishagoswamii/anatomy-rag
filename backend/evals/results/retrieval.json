@@ -1,0 +1,114 @@
+{
+  "modes": {
+    "vector": {
+      "hit@1": 0.9111111111111111,
+      "hit@3": 1.0,
+      "hit@6": 1.0,
+      "mrr": 0.9555555555555556,
+      "p50_ms": 9.47495800210163,
+      "hit@1:broad": 0.9,
+      "mrr:broad": 0.95,
+      "hit@1:exact_term": 0.9333333333333333,
+      "mrr:exact_term": 0.9666666666666667
+    },
+    "bm25": {
+      "hit@1": 0.6444444444444445,
+      "hit@3": 0.9777777777777777,
+      "hit@6": 1.0,
+      "mrr": 0.798148148148148,
+      "p50_ms": 1.5882920124568045,
+      "hit@1:broad": 0.6333333333333333,
+      "mrr:broad": 0.7916666666666666,
+      "hit@1:exact_term": 0.6666666666666666,
+      "mrr:exact_term": 0.8111111111111111
+    },
+    "hybrid": {
+      "hit@1": 0.8666666666666667,
+      "hit@3": 1.0,
+      "hit@6": 1.0,
+      "mrr": 0.9333333333333333,
+      "p50_ms": 13.16854200558737,
+      "hit@1:broad": 0.9,
+      "mrr:broad": 0.95,
+      "hit@1:exact_term": 0.8,
+      "mrr:exact_term": 0.9
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.8666666666666667,
+      "hit@3": 1.0,
+      "hit@6": 1.0,
+      "mrr": 0.9296296296296297,
+      "p50_ms": 2538.597041988396,
+      "hit@1:broad": 0.9,
+      "mrr:broad": 0.9444444444444444,
+      "hit@1:exact_term": 0.8,
+      "mrr:exact_term": 0.9
+    },
+    "vector_gated": {
+      "hit@1": 0.9111111111111111,
+      "hit@3": 1.0,
+      "hit@6": 1.0,
+      "mrr": 0.9555555555555556,
+      "p50_ms": 539.7327079990646,
+      "hit@1:broad": 0.9,
+      "mrr:broad": 0.95,
+      "hit@1:exact_term": 0.9333333333333333,
+      "mrr:exact_term": 0.9666666666666667
+    }
+  },
+  "gate": {
+    "answerable_min": -1.7171844244003296,
+    "out_of_scope_max": -7.013072967529297,
+    "sweep": [
+      {
+        "threshold": -6.0,
+        "answerable_passed": 1.0,
+        "out_of_scope_blocked": 1.0
+      },
+      {
+        "threshold": -4.0,
+        "answerable_passed": 1.0,
+        "out_of_scope_blocked": 1.0
+      },
+      {
+        "threshold": -2.0,
+        "answerable_passed": 1.0,
+        "out_of_scope_blocked": 1.0
+      },
+      {
+        "threshold": -1.0,
+        "answerable_passed": 0.9777777777777777,
+        "out_of_scope_blocked": 1.0
+      },
+      {
+        "threshold": 0.0,
+        "answerable_passed": 0.9111111111111111,
+        "out_of_scope_blocked": 1.0
+      },
+      {
+        "threshold": 1.0,
+        "answerable_passed": 0.8666666666666667,
+        "out_of_scope_blocked": 1.0
+      },
+      {
+        "threshold": 2.0,
+        "answerable_passed": 0.8222222222222222,
+        "out_of_scope_blocked": 1.0
+      }
+    ],
+    "adversarial_scores": {
+      "a01": -9.47,
+      "a02": -10.97,
+      "a03": 0.78,
+      "a04": -6.37,
+      "a05": -10.39,
+      "a06": -9.63,
+      "a07": -10.17,
+      "a08": -5.09,
+      "a09": -1.91,
+      "a10": -9.82
+    }
+  },
+  "misses": [],
+  "gate_mode": "vector_gated"
+}

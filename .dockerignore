@@ -1,0 +1,6 @@
+*
+!backend/pyproject.toml
+!backend/uv.lock
+!backend/app/**
+!data/chunks.jsonl
+**/__pycache__

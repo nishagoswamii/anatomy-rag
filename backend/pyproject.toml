@@ -1,0 +1,44 @@
+[project]
+name = "anatomy-rag"
+version = "0.1.0"
+description = "Citation-grounded RAG chatbot over OpenStax Anatomy and Physiology 2e"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "anthropic>=2.3.0",
+    "fastapi>=0.162.0",
+    "fastembed>=0.9.1",
+    "lancedb>=0.41.0",
+    "pyarrow>=26.0.0",
+    "pydantic-settings>=2.16.2",
+    "sse-starlette>=3.6.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.4.1.post1",
+    "ruff>=0.17.3",
+]
+ingest = [
+    "pypdfium2>=5.14.0",
+]
+
+[tool.uv]
+package = false
+default-groups = ["dev", "ingest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]  # long string literals; the formatter handles code
